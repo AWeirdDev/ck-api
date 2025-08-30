@@ -2,3 +2,4 @@
 .siteserver
 **/__pycache__/
 .venv
+.env
