@@ -1,0 +1,4 @@
+# for development only
+.siteserver
+**/__pycache__/
+.venv
