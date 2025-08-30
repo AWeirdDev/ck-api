@@ -18,9 +18,57 @@ git clone https://github.com/AWeirdDev/ck-api
 from ckapi import CkClient
 
 client = CkClient()
-
 news = await client.get_news()
+
+print(news)
 ```
+
+<details>
+<summary><b>Output</b></summary>
+
+```python
+[
+    Classified(
+        id='kpenVCJ9015', 
+        name='全部消息', 
+        module_id='5abf2d62aa93092cee58ceb4', 
+        section_id='IXZld9j7619', 
+
+        # rss feed
+        rss='https://www.ck.tp.edu.tw/nss/main/feeder/5abf2d62aa93092cee58ceb4/IXZld9j7619?f=normal&%240=kpenVCJ9015&vector=private&static=false', 
+        
+        messages=[
+            Message(
+                id='68b1658afe9e9455cc0e4993', 
+                visits=28, 
+                ctime='2025-08-29T08:32:10.402Z', 
+                utime='2025-08-30T08:01:45.023Z', 
+                keywords=[
+                    '???', 
+                    '???', 
+                    '??組'
+                ], 
+                announcer='??組', 
+                title='??', 
+                content=MessageContent(
+                    html='<p><a href="https://www.example.com">辦法</a></p>', 
+                    markdown='[辦法](https://www.example.com)'
+                ),
+                files=[
+                    File(
+                        name='example.pdf', 
+                        url='https://www.ck.tp.edu.tw/uploads/example.pdf'
+                    )
+                ]
+            ),
+            ... # more messages
+        ]
+    ),
+    ... # more items
+]
+```
+
+</details>
 
 ## REST API
 ```http
