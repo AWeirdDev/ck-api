@@ -22,6 +22,8 @@ client = CkClient()
 news = await client.get_news()
 ```
 
+From this section, I'm tired of translating things over and over, so I'll just write in English lol.
+
 ## REST API
 ```http
 GET http://localhost:8000/news
@@ -32,9 +34,20 @@ GET http://localhost:8000/news
 - `page` – Optional. Page #.
 - `text` – Optional. Text filter.
 
-## 如何找到這些資料
-首先，如果直接以 HTML 提取資料的話，內容並沒有被顯示，因此可能是利用 Javascript。
-從開發者工具的 Network 頁籤可以發現一些 XHR 請求，主要包括 SVG 圖示、 `single` 和 `find`。
+## How?
+There's this [CK app](https://apps.apple.com/app/id6608961910) made by our beloved senpai uwu
+
+...but bro just hasn't been updating it for 11+ months, and the "latest news" feature ain't working, and I ain't happy about this shi. So, I just decided to make my own *fetcher*.
+
+First, I fetched the HTML only and attempted to select the data rows in raw HTML. It didn't work.
+
+Turns out, they were using a super advanced technology called Vue and the data was fetched in the browser at runtime. Hell nawh.
+
+Network tab time!
+
+I picked XHR as the filter, and the requests are mostly SVG icons, the path `/single` and `/find`.
+
+The first path I tried to reverse engineer was `/find`, which looked pretty much like some kind of message filter?
 
 ***
 
