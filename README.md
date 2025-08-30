@@ -24,7 +24,7 @@ print(news)
 ```
 
 <details>
-<summary><b>Output</b></summary>
+<summary><b>Output (obscured)</b></summary>
 
 ```python
 [
@@ -44,12 +44,13 @@ print(news)
                 ctime='2025-08-29T08:32:10.402Z', 
                 utime='2025-08-30T08:01:45.023Z', 
                 keywords=[
+                    # obscured
                     '???', 
                     '???', 
                     '??組'
                 ], 
                 announcer='??組', 
-                title='??', 
+                title='???', 
                 content=MessageContent(
                     html='<p><a href="https://www.example.com">辦法</a></p>', 
                     markdown='[辦法](https://www.example.com)'
