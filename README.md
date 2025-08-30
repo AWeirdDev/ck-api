@@ -35,19 +35,18 @@ GET http://localhost:8000/news
 - `text` – Optional. Text filter.
 
 ## How?
-There's this [CK app](https://apps.apple.com/app/id6608961910) made by our beloved senpai uwu
+There's this [CK app](https://apps.apple.com/app/id6608961910) made by our beloved senpai uwu (very cool)
 
-...but bro just hasn't been updating it for 11+ months, and the "latest news" feature ain't working, and I ain't happy about this shi. So, I just decided to make my own *fetcher*.
+...but bro just hasn't been updating it for over a year, and the "latest news" feature isn't working.
+As a pedantic (kind of) developer myself I am NOT happy about this shi. So, I decided to make my own *fetcher* (Actually, I tried to make my own app first with Expo, but the project structure looked so hawwwd, so I'm not learning that for now).
 
-First, I fetched the HTML only and attempted to select the data rows in raw HTML. It didn't work.
+1. We visit the [index page](https://www.ck.tp.edu.tw/nss/p/index) and iterate through the script elements to find `siteserver` (possibly the backend server). I won't be hardcoding the static URL as it might change for later versions of the site (judging by the ID, it doesn't look man-made at all).
+2. We fetch the `siteserver`, and the server returns Javascript code. One line starts with `const deployMap = [`, which specifies some deployments, as far as I know.
+3. We loop through the deployments to find **module IDs** and **section IDs**. Note that the term "section" is assumed, as the actual identifier is called `sid`. The same applies for `mid`.
+4. We call the `/single` endpoint for individual module ID and section ID pairs, and some of them returns **class IDs** (for better message filtering).
+5. With the module, section & class IDs, we can now query the messages!
 
-Turns out, they were using a super advanced technology called Vue and the data was fetched in the browser at runtime. Hell nawh.
-
-Network tab time!
-
-I picked XHR as the filter, and the requests are mostly SVG icons, the path `/single` and `/find`.
-
-The first path I tried to reverse engineer was `/find`, which looked pretty much like some kind of message filter?
+It's actually possible to fetch messages without class IDs, but the output would be super messy and... unwanted! (Some are even test messages when they first published this site.)
 
 ***
 
