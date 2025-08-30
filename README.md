@@ -22,14 +22,12 @@ client = CkClient()
 news = await client.get_news()
 ```
 
-From this section, I'm tired of translating things over and over, so I'll just write in English lol.
-
 ## REST API
 ```http
 GET http://localhost:8000/news
 ```
 
-**Parameters**:
+**Query parameters**:
 - `n` – Optional. Number of items.
 - `page` – Optional. Page #.
 - `text` – Optional. Text filter.
@@ -47,6 +45,9 @@ As a pedantic (kind of) developer myself I am NOT happy about this shi. So, I de
 5. With the module, section & class IDs, we can now query the messages!
 
 It's actually possible to fetch messages without class IDs, but the output would be super messy and... unwanted! (Some are even test messages when they first published this site.)
+
+## License
+Licensed under MIT.
 
 ***
 
@@ -69,3 +70,11 @@ AS OF THE VERSION OF `robots.txt` FOUND ON 2025-08-30, THE BEHAVIORS OF THIS PRO
 [VIEW ON WAYBACK MACHINE (INTERNET ARCHIVE)](https://web.archive.org/web/20250830100619/https://www.ck.tp.edu.tw/robots.txt).
 
 **EDUCATIONAL PURPOSES ONLY.** **EDUCATIONAL PURPOSES ONLY.** **EDUCATIONAL PURPOSES ONLY.** 
+
+**MISUSE AND ABUSE IS STRICTLY PROHIBITED.**
+
+**THIS PROJECT IS NOT AFFILIATED WITH _Taipei Municipal Chien Kuo High School_.**
+
+***
+
+(c) 2025 AWeirdDev
