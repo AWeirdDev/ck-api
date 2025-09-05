@@ -118,11 +118,9 @@ Sitemap: https://www.ck.tp.edu.tw/sitemap.xml
 AS OF THE VERSION OF `robots.txt` FOUND ON 2025-08-30, THE BEHAVIORS OF THIS PROGRAM DO NOT VIOLATE THE ROBOTS TEXT.
 [VIEW ON WAYBACK MACHINE (INTERNET ARCHIVE)](https://web.archive.org/web/20250830100619/https://www.ck.tp.edu.tw/robots.txt).
 
-**EDUCATIONAL PURPOSES ONLY.** **EDUCATIONAL PURPOSES ONLY.** **EDUCATIONAL PURPOSES ONLY.** 
+**EDUCATIONAL PURPOSES ONLY. MISUSE AND ABUSE IS STRICTLY PROHIBITED.**
 
-**MISUSE AND ABUSE IS STRICTLY PROHIBITED.**
-
-**THIS PROJECT IS NOT AFFILIATED WITH _Taipei Municipal Chien Kuo High School_.**
+This project is not affiiliated with _Taipei Municipal Chien Kuo High School_.**
 
 ***
 
